@@ -1,5 +1,5 @@
 <?php
-namespace App\Core\Repositories\Exceptions;
+namespace YasenSlavov\Exceptions;
 
 class ModelNotFoundRepositoryException extends \Exception
 {

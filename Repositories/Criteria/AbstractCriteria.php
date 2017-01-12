@@ -1,7 +1,7 @@
 <?php
-namespace App\Core\Repositories\Eloquent\Criteria;
+namespace YasenSlavov\Criteria;
 
-use App\Core\Repositories\Interfaces\RepositoryInterface;
+use YasenSlavov\Interfaces\RepositoryInterface;
 
 abstract class AbstractCriteria
 {

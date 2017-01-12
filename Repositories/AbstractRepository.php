@@ -1,12 +1,12 @@
 <?php
-namespace App\Core\Repositories\Eloquent;
+namespace YasenSlavov;
 
 use Illuminate\Container\Container;
 use Illuminate\Database\Eloquent\Model;
-use App\Core\Repositories\Interfaces\CriteriaInterface;
-use App\Core\Repositories\Interfaces\RepositoryInterface;
-use App\Core\Repositories\Eloquent\Criteria\AbstractCriteria;
-use App\Core\Repositories\Exceptions\ModelNotFoundRepositoryException;
+use YasenSlavov\Interfaces\CriteriaInterface;
+use YasenSlavov\Interfaces\RepositoryInterface;
+use YasenSlavov\Criteria\AbstractCriteria;
+use YasenSlavov\Exceptions\ModelNotFoundRepositoryException;
 
 abstract class AbstractRepository implements RepositoryInterface, CriteriaInterface
 {

@@ -1,0 +1,20 @@
+{
+  "name": "ymslavov/laravel-repository",
+  "description": "Models for the WorkRest-related webservices.",
+  "authors": [
+    {
+      "name": "Yasen Slavov",
+      "email": "yasen.slavov@techhuddle.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.4",
+    "laravel/framework": "5.3.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "YasenSlavov\\": "Repositories"
+    }
+  },
+  "minimum-stability": "stable"
+}

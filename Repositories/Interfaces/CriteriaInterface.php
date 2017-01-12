@@ -1,7 +1,7 @@
 <?php
-namespace App\Core\Repositories\Interfaces;
+namespace YasenSlavov\Interfaces;
 
-use App\Core\Repositories\Eloquent\Criteria\AbstractCriteria;
+use YasenSlavov\Criteria\AbstractCriteria;
 
 /**
  * To be implemented by various AbstractRepositories. Used for work with search criteria
