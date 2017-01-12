@@ -1,10 +1,10 @@
 {
   "name": "ymslavov/laravel-repository",
-  "description": "Models for the WorkRest-related webservices.",
+  "description": "Stateless repositories for Laravel models.",
   "authors": [
     {
       "name": "Yasen Slavov",
-      "email": "yasen.slavov@techhuddle.com"
+      "email": "ymslavov@gmail.com"
     }
   ],
   "require": {
