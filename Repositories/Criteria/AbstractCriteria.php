@@ -1,7 +1,7 @@
 <?php
-namespace YasenSlavov\Criteria;
+namespace YasenSlavov\LaravelRepository\Repositories\Criteria;
 
-use YasenSlavov\Interfaces\RepositoryInterface;
+use YasenSlavov\LaravelRepository\Repositories\Interfaces\RepositoryInterface;
 
 abstract class AbstractCriteria
 {

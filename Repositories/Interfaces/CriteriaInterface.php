@@ -1,7 +1,7 @@
 <?php
-namespace YasenSlavov\Interfaces;
+namespace YasenSlavov\LaravelRepository\Repositories\Interfaces;
 
-use YasenSlavov\Criteria\AbstractCriteria;
+use YasenSlavov\LaravelRepository\Repositories\Criteria\AbstractCriteria;
 
 /**
  * To be implemented by various AbstractRepositories. Used for work with search criteria

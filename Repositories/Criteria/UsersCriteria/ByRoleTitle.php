@@ -1,8 +1,8 @@
 <?php
-namespace YasenSlavov\Criteria\UsersCriteria;
+namespace YasenSlavov\LaravelRepository\Repositories\Criteria\UsersCriteria;
 
-use YasenSlavov\Interfaces\RepositoryInterface;
-use YasenSlavov\Criteria\AbstractCriteria;
+use YasenSlavov\LaravelRepository\Repositories\Interfaces\RepositoryInterface;
+use YasenSlavov\LaravelRepository\Repositories\Criteria\AbstractCriteria;
 
 class ByRoleTitle extends AbstractCriteria
 {

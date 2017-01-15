@@ -1,6 +1,6 @@
 <?php
 
-namespace YasenSlavov\Interfaces;
+namespace YasenSlavov\LaravelRepository\Repositories\Interfaces;
 
 
 interface RepositoryInterface

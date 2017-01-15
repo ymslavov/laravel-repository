@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4b6536e6d4549cc408b6c150feb0d073",
-    "content-hash": "d7914cd628bd662a7e8be5effb7abf6a",
+    "hash": "9a0a5e76c2032c105ae500acd39f4224",
+    "content-hash": "b382ad7ca10a5a86c325cd21417b97c1",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -160,6 +160,54 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
+        },
+        {
+            "name": "hanneskod/classtools",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hanneskod/classtools.git",
+                "reference": "639caf8f48de38aaa7b68ca786ac6bd0aa6ffcc6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hanneskod/classtools/zipball/639caf8f48de38aaa7b68ca786ac6bd0aa6ffcc6",
+                "reference": "639caf8f48de38aaa7b68ca786ac6bd0aa6ffcc6",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "^3.0",
+                "php": ">=5.5.0",
+                "symfony/finder": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "hanneskod/readme-tester": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "hanneskod\\classtools\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "WTFPL"
+            ],
+            "authors": [
+                {
+                    "name": "Hannes Forsgård",
+                    "email": "hannes.forsgard@fripost.org"
+                }
+            ],
+            "description": "Find, extract and process classes from file system",
+            "homepage": "https://github.com/hanneskod/classtools",
+            "keywords": [
+                "class finder",
+                "code generator",
+                "metaprogramming",
+                "minimizer"
+            ],
+            "time": "2016-12-28 19:35:55"
         },
         {
             "name": "jakub-onderka/php-console-color",

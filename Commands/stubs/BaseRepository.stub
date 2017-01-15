@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyRootNamespaceRepositories;
+
+use YasenSlavov\LaravelRepository\Repositories\AbstractRepository;
+
+abstract class DummyClass extends AbstractRepository
+{
+    //TODO: Extend, if applicable
+}
