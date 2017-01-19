@@ -38,9 +38,20 @@ class GenerateRepositories extends GeneratorCommand
      */
     public function fire()
     {
-        if (parent::fire() === false) {
-            return;
+        $name = $this->parseName($this->getNameInput());
+
+        $path = $this->getPath($name);
+
+        if ($this->alreadyExists($this->getNameInput())) {
+            $this->line($this->type.' already exists! Skipping.');
+        }else{
+            $this->makeDirectory($path);
+
+            $this->files->put($path, $this->buildClass($name));
+
+            $this->info($this->type.' created successfully.');
         }
+
 
         $finder = new Finder();
         $iter = new ClassIterator($finder->files()->name('*.php')->in('app'));
