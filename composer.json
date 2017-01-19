@@ -1,6 +1,7 @@
 {
   "name": "ymslavov/laravel-repository",
-  "description": "Stateless repositories for Laravel models.",
+  "description": "Stateful repositories for Laravel models.",
+  "license": "MIT",
   "authors": [
     {
       "name": "Yasen Slavov",
