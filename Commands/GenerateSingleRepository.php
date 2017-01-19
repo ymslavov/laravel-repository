@@ -38,10 +38,20 @@ class GenerateSingleRepository extends GeneratorCommand
     {
         $this->type = $this->argument('name');
 
-        if (parent::fire() === false) {
-            return;
+        $name = $this->parseName($this->getNameInput());
+
+        $path = $this->getPath($name);
+
+        if ($this->alreadyExists($this->getNameInput())) {
+            $this->line($this->type.' already exists! Skipping.');
+            return false;
         }
 
+        $this->makeDirectory($path);
+
+        $this->files->put($path, $this->buildClass($name));
+
+        $this->info($this->type.' created successfully.');
     }
 
     /**
