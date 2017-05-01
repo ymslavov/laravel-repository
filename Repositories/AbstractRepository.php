@@ -202,37 +202,39 @@ abstract class AbstractRepository implements RepositoryInterface, CriteriaInterf
         return $this->builder->sum($column);
     }
 
-    /**
-     * Get last X records from the database, grouped by a column
-     *
-     * @param $count
-     * @param $groupByColumn
-     * @param null $whereColumn
-     * @param string $operator
-     * @param null $value
-     * @return mixed
-     */
-    public function lastGrouped($count, $groupByColumn, $whereColumn = null, $operator = '=', $value = null)
-    {
-        $modelTable = $this->model->getTable();
+		/**
+		 *
+		 * Get last X records from the database, grouped by a column
+		 *
+		 * @param $count
+		 * @param $groupByColumn
+		 * @param string $dateColumn
+		 * @param null $whereColumn
+		 * @param string $operator
+		 * @param null $value
+		 * @return mixed
+		 */
+		public function lastGrouped($count, $groupByColumn, $dateColumn = 'created_at', $whereColumn = null, $operator = '=', $value = null)
+		{
+			$modelTable = $this->model->getTable();
 
-        \DB::statement(\DB::raw("set @num := 0, @$groupByColumn:= ''"));
+			\DB::statement(\DB::raw("set @num := 0, @$groupByColumn:= ''"));
 
-        $q = \DB::select(\DB::raw(
-            "select *,
-              @num := if(@$groupByColumn = $groupByColumn, @num + 1, 1) as row_number,
-              @opta_person_id := $groupByColumn as dummy
-            from
-            (select *
-            from $modelTable
-            order by $groupByColumn, created_at desc) T
-            group by id, $groupByColumn, created_at
-           
-            having row_number <= $count " . (!is_null($whereColumn) ? "AND $whereColumn $operator $value" : "") . ";
-            "));
+			$q = \DB::select(\DB::raw(
+				"select *,
+								@num := if(@$groupByColumn = $groupByColumn, @num + 1, 1) as row_number,
+								@$groupByColumn := $groupByColumn as dummy
+							from
+							(select *
+							from $modelTable
+							order by $groupByColumn, $dateColumn desc) T
+							group by id, $groupByColumn, $dateColumn
+						 
+							having row_number <= $count " . (!is_null($whereColumn) ? "AND $whereColumn $operator $value" : "") . ";
+							"));
 
-        return (new $this->model())->hydrate($q);
-    }
+			return (new $this->model())->hydrate($q);
+		}
 
     /**
      * Return an (associative, if $key is specified) array of the $column values in the db
